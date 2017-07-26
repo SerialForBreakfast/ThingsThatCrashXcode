@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U0A-di-paE">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="GlL-el-1Wv">
+            <objects>
+                <viewController id="U0A-di-paE" customClass="VideoViewController" customModule="No_Vertical_Video" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WQw-ER-ghQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0yI-9p-phN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBj-mr-dGt">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-NG-VSf">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" red="0.68684565355329952" green="0.68684565355329952" blue="0.68684565355329952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si9-Ol-7Yl">
+                                <rect key="frame" x="20" y="20" width="49" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="53S-Cf-koL"/>
+                                    <constraint firstAttribute="width" constant="49" id="J8Q-Kf-qec"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="180 - iPhone 6 Plus"/>
+                                <connections>
+                                    <action selector="toggleButtonPressed:" destination="U0A-di-paE" eventType="touchUpInside" id="YGs-fi-9Hg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afG-C3-SiE">
+                                <rect key="frame" x="592" y="160" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Vw8-lL-gTB"/>
+                                    <constraint firstAttribute="height" constant="55" id="bnL-A4-qqN"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="recordButtonIcon.png"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="U0A-di-paE" eventType="touchUpInside" id="BEN-dQ-CyA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kbK-NG-VSf" firstAttribute="centerY" secondItem="afG-C3-SiE" secondAttribute="centerY" id="4mL-6N-PSa"/>
+                            <constraint firstAttribute="trailing" secondItem="kbK-NG-VSf" secondAttribute="trailing" id="AVV-ff-3LV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="afG-C3-SiE" secondAttribute="trailing" id="SF4-yf-CRU"/>
+                            <constraint firstItem="kbK-NG-VSf" firstAttribute="leading" secondItem="wBj-mr-dGt" secondAttribute="leading" id="Sa1-IV-q1d"/>
+                            <constraint firstItem="kbK-NG-VSf" firstAttribute="bottom" secondItem="0yI-9p-phN" secondAttribute="top" id="WGE-XN-RA6"/>
+                            <constraint firstItem="si9-Ol-7Yl" firstAttribute="top" secondItem="WQw-ER-ghQ" secondAttribute="bottom" id="ZZs-BL-667"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="si9-Ol-7Yl" secondAttribute="leading" id="aXj-VF-3fW"/>
+                            <constraint firstItem="afG-C3-SiE" firstAttribute="centerY" secondItem="wBj-mr-dGt" secondAttribute="centerY" id="lmj-Jd-bAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="kbK-NG-VSf" id="pqy-jb-Ymf"/>
+                        <outlet property="recordButton" destination="afG-C3-SiE" id="1FU-38-1Wc"/>
+                        <outlet property="toggleButton" destination="si9-Ol-7Yl" id="6w3-ZM-ujw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJf-89-ef2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.67616191904051" y="98.400000000000006"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="180 - iPhone 6 Plus" width="180" height="180"/>
+        <image name="recordButtonIcon.png" width="287" height="287"/>
+    </resources>
+</document>
